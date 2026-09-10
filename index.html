@@ -50,9 +50,17 @@
           <input id="filter-search" type="text" placeholder="예: spect, inspect ..." autocomplete="off" />
         </div>
       </div>
+      <div class="control-row">
+        <label class="checkbox-control">
+          <input type="checkbox" id="filter-favorites" />
+          <span>⭐ 즐겨찾기만 보기</span>
+        </label>
+      </div>
       <div class="control-row buttons-row">
         <button id="btn-random" class="btn btn-primary">🎲 랜덤 5개</button>
         <button id="btn-all" class="btn btn-secondary">📖 전체 보기</button>
+        <button id="btn-flashcard" class="btn btn-secondary">🃏 플래시카드</button>
+        <button id="btn-quiz" class="btn btn-secondary">📝 퀴즈</button>
         <button id="btn-reset" class="btn btn-ghost">↺ 필터 초기화</button>
       </div>
     </section>
@@ -62,6 +70,44 @@
     </section>
 
     <section id="results" class="results" aria-live="polite"></section>
+
+    <section id="flashcard-view" class="flashcard-view" hidden>
+      <div class="flashcard-progress">
+        <span id="flashcard-position"></span>
+        <button id="btn-flashcard-shuffle" class="btn btn-ghost btn-small">🔀 섞기</button>
+      </div>
+      <div id="flashcard" class="flashcard">
+        <div class="flashcard-face flashcard-front">
+          <span id="flashcard-word" class="flashcard-word"></span>
+          <span class="flashcard-hint">탭해서 뜻 보기</span>
+        </div>
+        <div class="flashcard-face flashcard-back">
+          <span id="flashcard-root-tag" class="word-root-tag"></span>
+          <span id="flashcard-breakdown"></span>
+        </div>
+      </div>
+      <div class="flashcard-nav">
+        <button id="btn-flashcard-prev" class="btn btn-ghost">← 이전</button>
+        <button id="btn-flashcard-flip" class="btn btn-primary">뒤집기</button>
+        <button id="btn-flashcard-next" class="btn btn-ghost">다음 →</button>
+      </div>
+    </section>
+
+    <section id="quiz-view" class="quiz-view" hidden>
+      <div class="quiz-score">
+        <span id="quiz-progress"></span>
+        <span id="quiz-score"></span>
+      </div>
+      <div class="quiz-card">
+        <div class="quiz-word" id="quiz-word"></div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div id="quiz-feedback" class="quiz-feedback"></div>
+      </div>
+      <div class="quiz-nav">
+        <button id="btn-quiz-next" class="btn btn-primary" disabled>다음 문제 →</button>
+        <button id="btn-quiz-restart" class="btn btn-ghost">↺ 퀴즈 다시 시작</button>
+      </div>
+    </section>
   </main>
 
   <footer class="app-footer">
