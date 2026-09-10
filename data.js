@@ -220,4 +220,172 @@ const ROOT_GROUPS = [
       { word: "apathy", parts: [{ t: "a", type: "prefix", m: "없는" }, { t: "path", type: "root", m: "느낌" }, { t: "y", type: "suffix", m: "~것" }], meaning: "무관심", difficulty: "hard" },
     ],
   },
+  {
+    root: "fac / fact / fic",
+    rootMeaning: "만들다, 하다 (make, do)",
+    words: [
+      { word: "factory", parts: [{ t: "fact", type: "root", m: "만들다" }, { t: "ory", type: "suffix", m: "~하는 곳" }], meaning: "공장", difficulty: "easy" },
+      { word: "manufacture", parts: [{ t: "manu", type: "prefix", m: "손으로" }, { t: "fact", type: "root", m: "만들다" }, { t: "ure", type: "suffix", m: "~것" }], meaning: "제조하다", difficulty: "medium" },
+      { word: "effect", parts: [{ t: "ef", type: "prefix", m: "밖으로" }, { t: "fect", type: "root", m: "만들다" }], meaning: "효과, 결과", difficulty: "easy" },
+      { word: "defect", parts: [{ t: "de", type: "prefix", m: "떨어져" }, { t: "fect", type: "root", m: "만들다" }], meaning: "결함", difficulty: "medium" },
+      { word: "artificial", parts: [{ t: "arti", type: "prefix", m: "기술로" }, { t: "fic", type: "root", m: "만들다" }, { t: "ial", type: "suffix", m: "~한" }], meaning: "인공적인", difficulty: "medium" },
+    ],
+  },
+  {
+    root: "form",
+    rootMeaning: "형태 (shape, form)",
+    words: [
+      { word: "transform", parts: [{ t: "trans", type: "prefix", m: "가로질러" }, { t: "form", type: "root", m: "형태" }], meaning: "변형시키다", difficulty: "easy" },
+      { word: "reform", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "form", type: "root", m: "형태" }], meaning: "개혁하다", difficulty: "easy" },
+      { word: "conform", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "form", type: "root", m: "형태" }], meaning: "순응하다", difficulty: "medium" },
+      { word: "deform", parts: [{ t: "de", type: "prefix", m: "나쁘게" }, { t: "form", type: "root", m: "형태" }], meaning: "변형시키다, 기형으로 만들다", difficulty: "medium" },
+      { word: "uniform", parts: [{ t: "uni", type: "prefix", m: "하나의" }, { t: "form", type: "root", m: "형태" }], meaning: "획일적인, 제복", difficulty: "easy" },
+    ],
+  },
+  {
+    root: "gress / grad",
+    rootMeaning: "걷다, 나아가다 (step, go)",
+    words: [
+      { word: "progress", parts: [{ t: "pro", type: "prefix", m: "앞으로" }, { t: "gress", type: "root", m: "걷다" }], meaning: "진전, 진행하다", difficulty: "easy" },
+      { word: "regress", parts: [{ t: "re", type: "prefix", m: "뒤로" }, { t: "gress", type: "root", m: "걷다" }], meaning: "퇴보하다", difficulty: "medium" },
+      { word: "aggressive", parts: [{ t: "ag", type: "prefix", m: "~쪽으로" }, { t: "gress", type: "root", m: "걷다" }, { t: "ive", type: "suffix", m: "~한" }], meaning: "공격적인", difficulty: "easy" },
+      { word: "graduate", parts: [{ t: "grad", type: "root", m: "걷다" }, { t: "uate", type: "suffix", m: "~하게 하다" }], meaning: "졸업하다", difficulty: "easy" },
+      { word: "degrade", parts: [{ t: "de", type: "prefix", m: "아래로" }, { t: "grade", type: "root", m: "걷다" }], meaning: "저하시키다, 비하하다", difficulty: "medium" },
+    ],
+  },
+  {
+    root: "greg",
+    rootMeaning: "무리 (flock, group)",
+    words: [
+      { word: "congregate", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "greg", type: "root", m: "무리" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "모이다", difficulty: "hard" },
+      { word: "segregate", parts: [{ t: "se", type: "prefix", m: "떨어져" }, { t: "greg", type: "root", m: "무리" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "분리하다, 차별하다", difficulty: "hard" },
+      { word: "aggregate", parts: [{ t: "ag", type: "prefix", m: "~쪽으로" }, { t: "greg", type: "root", m: "무리" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "합계, 모으다", difficulty: "hard" },
+      { word: "gregarious", parts: [{ t: "greg", type: "root", m: "무리" }, { t: "arious", type: "suffix", m: "~하는" }], meaning: "사교적인", difficulty: "hard" },
+    ],
+  },
+  {
+    root: "chron",
+    rootMeaning: "시간 (time)",
+    words: [
+      { word: "chronology", parts: [{ t: "chron", type: "root", m: "시간" }, { t: "ology", type: "suffix", m: "~학" }], meaning: "연대기, 연대순", difficulty: "medium" },
+      { word: "synchronize", parts: [{ t: "syn", type: "prefix", m: "함께" }, { t: "chron", type: "root", m: "시간" }, { t: "ize", type: "suffix", m: "~하게 하다" }], meaning: "동시에 발생하게 하다", difficulty: "medium" },
+      { word: "chronic", parts: [{ t: "chron", type: "root", m: "시간" }, { t: "ic", type: "suffix", m: "~적인" }], meaning: "만성적인", difficulty: "medium" },
+      { word: "anachronism", parts: [{ t: "ana", type: "prefix", m: "거슬러" }, { t: "chron", type: "root", m: "시간" }, { t: "ism", type: "suffix", m: "~것" }], meaning: "시대착오", difficulty: "hard" },
+    ],
+  },
+  {
+    root: "fer",
+    rootMeaning: "나르다, 옮기다 (carry, bear)",
+    words: [
+      { word: "transfer", parts: [{ t: "trans", type: "prefix", m: "가로질러" }, { t: "fer", type: "root", m: "나르다" }], meaning: "이동하다, 이전하다", difficulty: "easy" },
+      { word: "refer", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "fer", type: "root", m: "나르다" }], meaning: "참조하다, 언급하다", difficulty: "easy" },
+      { word: "confer", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "fer", type: "root", m: "나르다" }], meaning: "상의하다, 수여하다", difficulty: "medium" },
+      { word: "fertile", parts: [{ t: "fer", type: "root", m: "나르다" }, { t: "tile", type: "suffix", m: "~할 수 있는" }], meaning: "비옥한", difficulty: "medium" },
+      { word: "offer", parts: [{ t: "of", type: "prefix", m: "~쪽으로" }, { t: "fer", type: "root", m: "나르다" }], meaning: "제안하다", difficulty: "easy" },
+    ],
+  },
+  {
+    root: "flu / flux",
+    rootMeaning: "흐르다 (flow)",
+    words: [
+      { word: "influence", parts: [{ t: "in", type: "prefix", m: "안으로" }, { t: "flu", type: "root", m: "흐르다" }, { t: "ence", type: "suffix", m: "~것" }], meaning: "영향", difficulty: "easy" },
+      { word: "fluent", parts: [{ t: "flu", type: "root", m: "흐르다" }, { t: "ent", type: "suffix", m: "~한" }], meaning: "유창한", difficulty: "medium" },
+      { word: "fluctuate", parts: [{ t: "flu", type: "root", m: "흐르다" }, { t: "ctuate", type: "suffix", m: "~하다" }], meaning: "변동하다", difficulty: "hard" },
+      { word: "influx", parts: [{ t: "in", type: "prefix", m: "안으로" }, { t: "flux", type: "root", m: "흐르다" }], meaning: "유입", difficulty: "hard" },
+    ],
+  },
+  {
+    root: "magn",
+    rootMeaning: "큰 (great)",
+    words: [
+      { word: "magnify", parts: [{ t: "magn", type: "root", m: "큰" }, { t: "ify", type: "suffix", m: "~하게 만들다" }], meaning: "확대하다", difficulty: "easy" },
+      { word: "magnitude", parts: [{ t: "magn", type: "root", m: "큰" }, { t: "itude", type: "suffix", m: "~정도" }], meaning: "규모, 중요도", difficulty: "medium" },
+      { word: "magnificent", parts: [{ t: "magn", type: "root", m: "큰" }, { t: "ificent", type: "suffix", m: "~한" }], meaning: "웅장한", difficulty: "medium" },
+      { word: "magnate", parts: [{ t: "magn", type: "root", m: "큰" }, { t: "ate", type: "suffix", m: "~하는 사람" }], meaning: "거물", difficulty: "hard" },
+    ],
+  },
+  {
+    root: "mov / mot / mob",
+    rootMeaning: "움직이다 (move)",
+    words: [
+      { word: "motivate", parts: [{ t: "mot", type: "root", m: "움직이다" }, { t: "ivate", type: "suffix", m: "~하게 하다" }], meaning: "동기를 부여하다", difficulty: "easy" },
+      { word: "remove", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "move", type: "root", m: "움직이다" }], meaning: "제거하다", difficulty: "easy" },
+      { word: "promote", parts: [{ t: "pro", type: "prefix", m: "앞으로" }, { t: "mote", type: "root", m: "움직이다" }], meaning: "촉진하다, 승진시키다", difficulty: "easy" },
+      { word: "mobile", parts: [{ t: "mob", type: "root", m: "움직이다" }, { t: "ile", type: "suffix", m: "~할 수 있는" }], meaning: "이동하는, 휴대용의", difficulty: "easy" },
+      { word: "emotion", parts: [{ t: "e", type: "prefix", m: "밖으로" }, { t: "mot", type: "root", m: "움직이다" }, { t: "ion", type: "suffix", m: "~것" }], meaning: "감정", difficulty: "easy" },
+    ],
+  },
+  {
+    root: "spir",
+    rootMeaning: "숨쉬다 (breathe)",
+    words: [
+      { word: "inspire", parts: [{ t: "in", type: "prefix", m: "안으로" }, { t: "spire", type: "root", m: "숨쉬다" }], meaning: "영감을 주다", difficulty: "easy" },
+      { word: "expire", parts: [{ t: "ex", type: "prefix", m: "밖으로" }, { t: "spire", type: "root", m: "숨쉬다" }], meaning: "만료되다, 숨을 거두다", difficulty: "medium" },
+      { word: "conspire", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "spire", type: "root", m: "숨쉬다" }], meaning: "공모하다", difficulty: "medium" },
+      { word: "aspire", parts: [{ t: "a", type: "prefix", m: "~쪽으로" }, { t: "spire", type: "root", m: "숨쉬다" }], meaning: "열망하다", difficulty: "medium" },
+      { word: "spirit", parts: [{ t: "spir", type: "root", m: "숨쉬다" }, { t: "it", type: "suffix", m: "~것" }], meaning: "정신, 영혼", difficulty: "easy" },
+    ],
+  },
+  {
+    root: "struct",
+    rootMeaning: "짓다, 세우다 (build)",
+    words: [
+      { word: "construct", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "struct", type: "root", m: "짓다" }], meaning: "건설하다", difficulty: "easy" },
+      { word: "destroy", parts: [{ t: "de", type: "prefix", m: "반대로" }, { t: "stroy", type: "root", m: "짓다" }], meaning: "파괴하다", difficulty: "easy" },
+      { word: "instruct", parts: [{ t: "in", type: "prefix", m: "안에" }, { t: "struct", type: "root", m: "짓다" }], meaning: "가르치다, 지시하다", difficulty: "easy" },
+      { word: "structure", parts: [{ t: "struct", type: "root", m: "짓다" }, { t: "ure", type: "suffix", m: "~것" }], meaning: "구조", difficulty: "easy" },
+      { word: "obstruct", parts: [{ t: "ob", type: "prefix", m: "막아서서" }, { t: "struct", type: "root", m: "짓다" }], meaning: "막다, 방해하다", difficulty: "medium" },
+    ],
+  },
+  {
+    root: "tempo / tempor",
+    rootMeaning: "시간 (time)",
+    words: [
+      { word: "temporary", parts: [{ t: "tempor", type: "root", m: "시간" }, { t: "ary", type: "suffix", m: "~적인" }], meaning: "일시적인", difficulty: "easy" },
+      { word: "contemporary", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "tempor", type: "root", m: "시간" }, { t: "ary", type: "suffix", m: "~적인" }], meaning: "동시대의", difficulty: "medium" },
+      { word: "temporal", parts: [{ t: "tempor", type: "root", m: "시간" }, { t: "al", type: "suffix", m: "~의" }], meaning: "시간의, 속세의", difficulty: "hard" },
+      { word: "extemporaneous", parts: [{ t: "ex", type: "prefix", m: "밖으로" }, { t: "tempor", type: "root", m: "시간" }, { t: "aneous", type: "suffix", m: "~한" }], meaning: "즉흥적인", difficulty: "hard" },
+    ],
+  },
+  {
+    root: "vac",
+    rootMeaning: "비다 (empty)",
+    words: [
+      { word: "vacant", parts: [{ t: "vac", type: "root", m: "비다" }, { t: "ant", type: "suffix", m: "~한" }], meaning: "비어 있는", difficulty: "easy" },
+      { word: "vacuum", parts: [{ t: "vac", type: "root", m: "비다" }, { t: "uum", type: "suffix", m: "~것" }], meaning: "진공", difficulty: "easy" },
+      { word: "evacuate", parts: [{ t: "e", type: "prefix", m: "밖으로" }, { t: "vacu", type: "root", m: "비다" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "대피시키다, 비우다", difficulty: "medium" },
+      { word: "vacation", parts: [{ t: "vac", type: "root", m: "비다" }, { t: "ation", type: "suffix", m: "~것" }], meaning: "방학, 휴가", difficulty: "easy" },
+    ],
+  },
+  {
+    root: "ven / vent",
+    rootMeaning: "오다 (come)",
+    words: [
+      { word: "convene", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "vene", type: "root", m: "오다" }], meaning: "소집하다, 모이다", difficulty: "medium" },
+      { word: "prevent", parts: [{ t: "pre", type: "prefix", m: "미리" }, { t: "vent", type: "root", m: "오다" }], meaning: "막다, 예방하다", difficulty: "easy" },
+      { word: "intervene", parts: [{ t: "inter", type: "prefix", m: "사이에" }, { t: "vene", type: "root", m: "오다" }], meaning: "개입하다", difficulty: "medium" },
+      { word: "convention", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "vent", type: "root", m: "오다" }, { t: "ion", type: "suffix", m: "~것" }], meaning: "회의, 관습", difficulty: "medium" },
+      { word: "venue", parts: [{ t: "ven", type: "root", m: "오다" }, { t: "ue", type: "suffix", m: "~것" }], meaning: "장소, 개최지", difficulty: "easy" },
+    ],
+  },
+  {
+    root: "vinc / vict",
+    rootMeaning: "정복하다 (conquer)",
+    words: [
+      { word: "convince", parts: [{ t: "con", type: "prefix", m: "완전히" }, { t: "vince", type: "root", m: "정복하다" }], meaning: "설득하다", difficulty: "easy" },
+      { word: "victory", parts: [{ t: "vict", type: "root", m: "정복하다" }, { t: "ory", type: "suffix", m: "~것" }], meaning: "승리", difficulty: "easy" },
+      { word: "invincible", parts: [{ t: "in", type: "prefix", m: "부정" }, { t: "vinc", type: "root", m: "정복하다" }, { t: "ible", type: "suffix", m: "~할 수 있는" }], meaning: "무적의", difficulty: "hard" },
+      { word: "convict", parts: [{ t: "con", type: "prefix", m: "완전히" }, { t: "vict", type: "root", m: "정복하다" }], meaning: "유죄를 선고하다, 죄수", difficulty: "medium" },
+    ],
+  },
+  {
+    root: "viv / vit",
+    rootMeaning: "살다 (live)",
+    words: [
+      { word: "survive", parts: [{ t: "sur", type: "prefix", m: "넘어서" }, { t: "vive", type: "root", m: "살다" }], meaning: "살아남다", difficulty: "easy" },
+      { word: "revive", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "vive", type: "root", m: "살다" }], meaning: "소생시키다", difficulty: "medium" },
+      { word: "vivid", parts: [{ t: "viv", type: "root", m: "살다" }, { t: "id", type: "suffix", m: "~한" }], meaning: "생생한", difficulty: "easy" },
+      { word: "vital", parts: [{ t: "vit", type: "root", m: "살다" }, { t: "al", type: "suffix", m: "~의" }], meaning: "필수적인, 생명의", difficulty: "easy" },
+    ],
+  },
 ];
