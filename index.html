@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#2f6f4f" />
+<title>어원 단어장 - Root Word Study</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>🌱 어원 단어장</h1>
+    <p class="subtitle">어근으로 배우는 영단어 &mdash; 접두사 · 어근 · 접미사 색으로 구분</p>
+  </header>
+
+  <main class="container">
+    <section class="legend" aria-label="색상 범례">
+      <span class="legend-item"><i class="dot prefix"></i>접두사 (Prefix)</span>
+      <span class="legend-item"><i class="dot root"></i>어근 (Root)</span>
+      <span class="legend-item"><i class="dot suffix"></i>접미사 (Suffix)</span>
+    </section>
+
+    <section class="controls" aria-label="필터 및 검색">
+      <div class="control-row">
+        <div class="control">
+          <label for="filter-root">어근</label>
+          <select id="filter-root"><option value="">전체</option></select>
+        </div>
+        <div class="control">
+          <label for="filter-prefix">접두사</label>
+          <select id="filter-prefix"><option value="">전체</option></select>
+        </div>
+        <div class="control">
+          <label for="filter-suffix">접미사</label>
+          <select id="filter-suffix"><option value="">전체</option></select>
+        </div>
+        <div class="control">
+          <label for="filter-difficulty">난이도</label>
+          <select id="filter-difficulty">
+            <option value="">전체</option>
+            <option value="easy">쉬움</option>
+            <option value="medium">보통</option>
+            <option value="hard">어려움</option>
+          </select>
+        </div>
+      </div>
+      <div class="control-row">
+        <div class="control search-control">
+          <label for="filter-search">단어 검색</label>
+          <input id="filter-search" type="text" placeholder="예: spect, inspect ..." autocomplete="off" />
+        </div>
+      </div>
+      <div class="control-row buttons-row">
+        <button id="btn-random" class="btn btn-primary">🎲 랜덤 5개</button>
+        <button id="btn-all" class="btn btn-secondary">📖 전체 보기</button>
+        <button id="btn-reset" class="btn btn-ghost">↺ 필터 초기화</button>
+      </div>
+    </section>
+
+    <section class="status-bar">
+      <span id="result-count"></span>
+    </section>
+
+    <section id="results" class="results" aria-live="polite"></section>
+  </main>
+
+  <footer class="app-footer">
+    <p>총 <span id="total-count">0</span>개 단어 · <span id="total-roots">0</span>개 어근 등록됨</p>
+  </footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
