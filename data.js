@@ -145,6 +145,7 @@ const ROOT_GROUPS = [
       { word: "project", parts: [{ t: "pro", type: "prefix", m: "앞으로" }, { t: "ject", type: "root", m: "던지다" }], meaning: "계획, 투영하다", difficulty: "easy" },
       { word: "eject", parts: [{ t: "e", type: "prefix", m: "밖으로" }, { t: "ject", type: "root", m: "던지다" }], meaning: "방출하다, 튀어나오다", difficulty: "medium" },
       { word: "object", parts: [{ t: "ob", type: "prefix", m: "맞서서" }, { t: "ject", type: "root", m: "던지다" }], meaning: "반대하다, 물체", difficulty: "easy" },
+      { word: "conjecture", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "ject", type: "root", m: "던지다" }, { t: "ure", type: "suffix", m: "~것" }], meaning: "추측, 추측하다", difficulty: "hard" },
     ],
   },
   {
@@ -386,6 +387,69 @@ const ROOT_GROUPS = [
       { word: "revive", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "vive", type: "root", m: "살다" }], meaning: "소생시키다", difficulty: "medium" },
       { word: "vivid", parts: [{ t: "viv", type: "root", m: "살다" }, { t: "id", type: "suffix", m: "~한" }], meaning: "생생한", difficulty: "easy" },
       { word: "vital", parts: [{ t: "vit", type: "root", m: "살다" }, { t: "al", type: "suffix", m: "~의" }], meaning: "필수적인, 생명의", difficulty: "easy" },
+    ],
+  },
+  {
+    root: "prehend / prehens",
+    rootMeaning: "잡다 (seize, grasp)",
+    words: [
+      { word: "comprehend", parts: [{ t: "com", type: "prefix", m: "함께" }, { t: "prehend", type: "root", m: "잡다" }], meaning: "이해하다", difficulty: "easy" },
+      { word: "comprehensive", parts: [{ t: "com", type: "prefix", m: "함께" }, { t: "prehens", type: "root", m: "잡다" }, { t: "ive", type: "suffix", m: "~한" }], meaning: "포괄적인, 종합적인", difficulty: "medium" },
+      { word: "apprehend", parts: [{ t: "ap", type: "prefix", m: "~쪽으로" }, { t: "prehend", type: "root", m: "잡다" }], meaning: "체포하다, 이해하다", difficulty: "medium" },
+      { word: "apprehensive", parts: [{ t: "ap", type: "prefix", m: "~쪽으로" }, { t: "prehens", type: "root", m: "잡다" }, { t: "ive", type: "suffix", m: "~한" }], meaning: "걱정하는, 불안한", difficulty: "hard" },
+      { word: "surprise", parts: [{ t: "sur", type: "prefix", m: "위에서" }, { t: "prise", type: "root", m: "잡다" }], meaning: "놀라게 하다, 놀람", difficulty: "easy" },
+    ],
+  },
+  {
+    root: "not / gno / cogn",
+    rootMeaning: "알다 (know)",
+    words: [
+      { word: "notify", parts: [{ t: "not", type: "root", m: "알다" }, { t: "ify", type: "suffix", m: "~하게 만들다" }], meaning: "알리다", difficulty: "easy" },
+      { word: "notion", parts: [{ t: "not", type: "root", m: "알다" }, { t: "ion", type: "suffix", m: "~것" }], meaning: "개념, 생각", difficulty: "easy" },
+      { word: "notorious", parts: [{ t: "not", type: "root", m: "알다" }, { t: "orious", type: "suffix", m: "~한" }], meaning: "악명 높은", difficulty: "medium" },
+      { word: "recognize", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "cogn", type: "root", m: "알다" }, { t: "ize", type: "suffix", m: "~하게 하다" }], meaning: "인식하다, 알아보다", difficulty: "easy" },
+      { word: "ignore", parts: [{ t: "i", type: "prefix", m: "부정" }, { t: "gnore", type: "root", m: "알다" }], meaning: "무시하다", difficulty: "easy" },
+    ],
+  },
+  {
+    root: "sta / sist / stant",
+    rootMeaning: "서다 (stand)",
+    words: [
+      { word: "substantial", parts: [{ t: "sub", type: "prefix", m: "아래에" }, { t: "stant", type: "root", m: "서다" }, { t: "ial", type: "suffix", m: "~한" }], meaning: "상당한, 실질적인", difficulty: "medium" },
+      { word: "substantially", parts: [{ t: "sub", type: "prefix", m: "아래에" }, { t: "stant", type: "root", m: "서다" }, { t: "ially", type: "suffix", m: "~하게" }], meaning: "상당히, 실질적으로", difficulty: "medium" },
+      { word: "instant", parts: [{ t: "in", type: "prefix", m: "안에" }, { t: "stant", type: "root", m: "서다" }], meaning: "순간, 즉각적인", difficulty: "easy" },
+      { word: "circumstance", parts: [{ t: "circum", type: "prefix", m: "주위에" }, { t: "stance", type: "root", m: "서다" }], meaning: "상황, 환경", difficulty: "medium" },
+      { word: "obstacle", parts: [{ t: "ob", type: "prefix", m: "막아서서" }, { t: "sta", type: "root", m: "서다" }, { t: "cle", type: "suffix", m: "~것" }], meaning: "장애물", difficulty: "medium" },
+    ],
+  },
+  {
+    root: "satur / satis",
+    rootMeaning: "가득 채우다, 충분한 (fill, enough)",
+    words: [
+      { word: "saturate", parts: [{ t: "satur", type: "root", m: "가득 채우다" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "포화시키다, 흠뻑 적시다", difficulty: "medium" },
+      { word: "saturated", parts: [{ t: "satur", type: "root", m: "가득 채우다" }, { t: "ated", type: "suffix", m: "~된" }], meaning: "포화된, 흠뻑 젖은", difficulty: "medium" },
+      { word: "satisfy", parts: [{ t: "satis", type: "root", m: "충분한" }, { t: "fy", type: "suffix", m: "~하게 만들다" }], meaning: "만족시키다", difficulty: "easy" },
+      { word: "insatiable", parts: [{ t: "in", type: "prefix", m: "부정" }, { t: "satia", type: "root", m: "충분한" }, { t: "ble", type: "suffix", m: "~할 수 있는" }], meaning: "만족할 줄 모르는", difficulty: "hard" },
+    ],
+  },
+  {
+    root: "tuit / tut",
+    rootMeaning: "보다, 보호하다 (look after, guard)",
+    words: [
+      { word: "intuition", parts: [{ t: "in", type: "prefix", m: "안을" }, { t: "tuit", type: "root", m: "보다" }, { t: "ion", type: "suffix", m: "~것" }], meaning: "직관", difficulty: "medium" },
+      { word: "intuitive", parts: [{ t: "in", type: "prefix", m: "안을" }, { t: "tuit", type: "root", m: "보다" }, { t: "ive", type: "suffix", m: "~한" }], meaning: "직관적인", difficulty: "medium" },
+      { word: "counterintuitive", parts: [{ t: "counter", type: "prefix", m: "반대로" }, { t: "in", type: "prefix", m: "안을" }, { t: "tuit", type: "root", m: "보다" }, { t: "ive", type: "suffix", m: "~한" }], meaning: "직관에 반하는, 반직관적인", difficulty: "hard" },
+      { word: "tutor", parts: [{ t: "tut", type: "root", m: "보호하다" }, { t: "or", type: "suffix", m: "~하는 사람" }], meaning: "개인교사", difficulty: "easy" },
+      { word: "tuition", parts: [{ t: "tuit", type: "root", m: "보호하다" }, { t: "ion", type: "suffix", m: "~것" }], meaning: "수업료, 교습", difficulty: "medium" },
+    ],
+  },
+  {
+    root: "기타 (어원 불명확)",
+    rootMeaning: "라틴어/그리스어 어근이 아닌 게르만어 계열이거나 어원이 분명하지 않은 단어들",
+    words: [
+      { word: "hamper", parts: [{ t: "hamper", type: "root", m: "방해하다 (옛 프랑스어 hanapier에서 유래, 어원 불명확)" }], meaning: "방해하다, 저지하다", difficulty: "medium" },
+      { word: "thoroughly", parts: [{ t: "thorough", type: "root", m: "완전히 (고대영어 þuruh, through의 변형)" }, { t: "ly", type: "suffix", m: "~하게" }], meaning: "완전히, 철저하게", difficulty: "easy" },
+      { word: "akin", parts: [{ t: "a", type: "prefix", m: "~인 상태의" }, { t: "kin", type: "root", m: "친족 (게르만어 kin, 가족)" }], meaning: "동족의, 유사한", difficulty: "hard" },
     ],
   },
 ];
