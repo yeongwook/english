@@ -10,6 +10,7 @@
         meaning: w.meaning,
         difficulty: w.difficulty,
         parts: w.parts,
+        example: w.example,
         root: group.root,
         rootMeaning: group.rootMeaning,
       });
@@ -48,8 +49,12 @@
   const btnFlashcardShuffle = document.getElementById("btn-flashcard-shuffle");
 
   const quizView = document.getElementById("quiz-view");
+  const quizTypeTabsEl = document.getElementById("quiz-type-tabs");
+  const quizPromptLabelEl = document.getElementById("quiz-prompt-label");
   const quizWordEl = document.getElementById("quiz-word");
   const quizOptionsEl = document.getElementById("quiz-options");
+  const quizTypeFormEl = document.getElementById("quiz-type-form");
+  const quizTypeInputEl = document.getElementById("quiz-type-input");
   const quizFeedbackEl = document.getElementById("quiz-feedback");
   const quizProgressEl = document.getElementById("quiz-progress");
   const quizScoreEl = document.getElementById("quiz-score");
@@ -61,7 +66,14 @@
   let favorites = loadFavorites();
 
   const flashcardState = { deck: [], index: 0, flipped: false };
-  const quizState = { questions: [], index: 0, score: 0, answered: false };
+  const quizState = { type: "meaning-choice", questions: [], index: 0, score: 0, answered: false };
+
+  const QUIZ_PROMPT_LABEL = {
+    "meaning-choice": "다음 단어의 뜻으로 알맞은 것을 고르세요",
+    "type-word": "다음 뜻에 해당하는 영단어를 쓰세요",
+    "type-meaning": "다음 단어의 뜻을 한글로 쓰세요",
+    "fill-blank": "빈칸에 들어갈 단어를 쓰세요",
+  };
 
   // ---- 즐겨찾기 ----
   function loadFavorites() {
@@ -396,20 +408,52 @@
   }
 
   // ---- 퀴즈 ----
-  function buildQuizQuestions() {
+  function makeBlank(sentence, word) {
+    const re = new RegExp("\\b" + word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "\\b", "i");
+    return sentence.replace(re, "_____");
+  }
+
+  function normalizeAnswer(text) {
+    return text.trim().toLowerCase().replace(/\s+/g, "");
+  }
+
+  function checkMeaningAnswer(input, correctMeaning) {
+    const normInput = normalizeAnswer(input);
+    if (!normInput) return false;
+    const parts = correctMeaning.split(/[,\/;·]/).map((p) => normalizeAnswer(p)).filter(Boolean);
+    return parts.some(
+      (p) => p === normInput || (p.length >= 2 && (p.includes(normInput) || normInput.includes(p)))
+    );
+  }
+
+  function buildQuizQuestions(type) {
+    quizState.type = type;
     const pool = getFiltered();
-    const source = pool.length >= 4 ? pool : FLAT_WORDS;
-    const questionWords = pickRandom(pool.length > 0 ? pool : FLAT_WORDS, Math.min(10, (pool.length > 0 ? pool : FLAT_WORDS).length));
+    let basePool = pool.length > 0 ? pool : FLAT_WORDS;
+    if (type === "fill-blank") basePool = basePool.filter((w) => !!w.example);
+    if (basePool.length === 0) basePool = FLAT_WORDS.filter((w) => !!w.example);
+
+    const questionWords = pickRandom(basePool, Math.min(10, basePool.length));
 
     quizState.questions = questionWords.map((w) => {
-      const wrongPool = source.filter((x) => x.word !== w.word);
-      const wrongs = pickRandom(wrongPool, Math.min(3, wrongPool.length));
-      const options = pickRandom([w, ...wrongs], 1 + wrongs.length);
-      return { word: w, options };
+      if (type === "meaning-choice") {
+        const source = pool.length >= 4 ? pool : FLAT_WORDS;
+        const wrongPool = source.filter((x) => x.word !== w.word);
+        const wrongs = pickRandom(wrongPool, Math.min(3, wrongPool.length));
+        const options = pickRandom([w, ...wrongs], 1 + wrongs.length);
+        return { word: w, options };
+      }
+      return { word: w };
     });
     quizState.index = 0;
     quizState.score = 0;
     quizState.answered = false;
+  }
+
+  function updateQuizTypeTabs() {
+    [...quizTypeTabsEl.children].forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.quizType === quizState.type);
+    });
   }
 
   function renderQuiz() {
@@ -417,8 +461,15 @@
     quizFeedbackEl.textContent = "";
     quizFeedbackEl.className = "quiz-feedback";
     btnQuizNext.disabled = true;
+    updateQuizTypeTabs();
+
+    const isChoice = quizState.type === "meaning-choice";
+    quizOptionsEl.hidden = !isChoice;
+    quizTypeFormEl.hidden = isChoice;
+    quizWordEl.classList.toggle("quiz-sentence", quizState.type === "fill-blank");
 
     if (!q) {
+      quizPromptLabelEl.textContent = "";
       quizWordEl.textContent = "퀴즈를 만들 단어가 부족해요";
       quizOptionsEl.innerHTML = "";
       quizProgressEl.textContent = "";
@@ -426,27 +477,49 @@
       return;
     }
 
-    quizWordEl.textContent = q.word.word;
+    quizPromptLabelEl.textContent = QUIZ_PROMPT_LABEL[quizState.type] || "";
     quizProgressEl.textContent = (quizState.index + 1) + " / " + quizState.questions.length + " 문제";
     quizScoreEl.textContent = "점수: " + quizState.score;
 
-    quizOptionsEl.innerHTML = "";
-    q.options.forEach((opt) => {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "quiz-option";
-      btn.textContent = opt.meaning;
-      btn.addEventListener("click", () => answerQuiz(opt, btn, q));
-      quizOptionsEl.appendChild(btn);
-    });
+    if (isChoice) {
+      quizWordEl.textContent = q.word.word;
+      quizOptionsEl.innerHTML = "";
+      q.options.forEach((opt) => {
+        const btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "quiz-option";
+        btn.textContent = opt.meaning;
+        btn.addEventListener("click", () => answerQuizChoice(opt, btn, q));
+        quizOptionsEl.appendChild(btn);
+      });
+      return;
+    }
+
+    if (quizState.type === "type-word") {
+      quizWordEl.textContent = q.word.meaning;
+    } else if (quizState.type === "type-meaning") {
+      quizWordEl.textContent = q.word.word;
+    } else if (quizState.type === "fill-blank") {
+      quizWordEl.textContent = makeBlank(q.word.example, q.word.word);
+    }
+    quizTypeInputEl.value = "";
+    quizTypeInputEl.classList.remove("correct", "incorrect");
+    quizTypeInputEl.disabled = false;
+    quizTypeInputEl.focus();
   }
 
-  function answerQuiz(selected, selectedBtn, question) {
-    if (quizState.answered) return;
+  function finishAnswer(correct, correctText) {
     quizState.answered = true;
-
-    const correct = selected.word === question.word.word;
     if (correct) quizState.score += 1;
+    quizFeedbackEl.textContent = correct ? "정답이에요! 🎉" : "아쉬워요. 정답은 \"" + correctText + "\"";
+    quizFeedbackEl.className = "quiz-feedback " + (correct ? "correct" : "incorrect");
+    quizScoreEl.textContent = "점수: " + quizState.score;
+    btnQuizNext.disabled = false;
+  }
+
+  function answerQuizChoice(selected, selectedBtn, question) {
+    if (quizState.answered) return;
+    const correct = selected.word === question.word.word;
 
     [...quizOptionsEl.children].forEach((btn) => {
       btn.disabled = true;
@@ -454,16 +527,42 @@
     });
     if (!correct) selectedBtn.classList.add("incorrect");
 
-    quizFeedbackEl.textContent = correct ? "정답이에요! 🎉" : "아쉬워요. 정답은 \"" + question.word.meaning + "\"";
-    quizFeedbackEl.className = "quiz-feedback " + (correct ? "correct" : "incorrect");
-    quizScoreEl.textContent = "점수: " + quizState.score;
-    btnQuizNext.disabled = false;
+    finishAnswer(correct, question.word.meaning);
+  }
+
+  function answerQuizTyped() {
+    if (quizState.answered) return;
+    const q = quizState.questions[quizState.index];
+    if (!q) return;
+    const input = quizTypeInputEl.value;
+    if (!input.trim()) return;
+
+    let correct = false;
+    let correctText = "";
+    if (quizState.type === "type-word") {
+      correctText = q.word.word;
+      correct = normalizeAnswer(input) === normalizeAnswer(q.word.word);
+    } else if (quizState.type === "type-meaning") {
+      correctText = q.word.meaning;
+      correct = checkMeaningAnswer(input, q.word.meaning);
+    } else if (quizState.type === "fill-blank") {
+      correctText = q.word.word;
+      correct = normalizeAnswer(input) === normalizeAnswer(q.word.word);
+    }
+
+    quizTypeInputEl.disabled = true;
+    quizTypeInputEl.classList.add(correct ? "correct" : "incorrect");
+    finishAnswer(correct, correctText);
   }
 
   function quizNext() {
     if (quizState.index >= quizState.questions.length - 1) {
+      quizPromptLabelEl.textContent = "";
+      quizWordEl.classList.remove("quiz-sentence");
       quizWordEl.textContent = "퀴즈 완료! 🎉";
       quizOptionsEl.innerHTML = "";
+      quizOptionsEl.hidden = true;
+      quizTypeFormEl.hidden = true;
       quizProgressEl.textContent = "";
       quizFeedbackEl.textContent =
         "최종 점수: " + quizState.score + " / " + quizState.questions.length;
@@ -476,8 +575,8 @@
     renderQuiz();
   }
 
-  function startQuiz() {
-    buildQuizQuestions();
+  function startQuiz(type) {
+    buildQuizQuestions(type || quizState.type || "meaning-choice");
     mode = "quiz";
     renderQuiz();
     showView();
@@ -523,7 +622,20 @@
     render();
   });
 
-  btnQuiz.addEventListener("click", startQuiz);
+  btnQuiz.addEventListener("click", () => startQuiz());
+
+  quizTypeTabsEl.addEventListener("click", (e) => {
+    const btn = e.target.closest(".quiz-type-tab");
+    if (!btn) return;
+    const type = btn.dataset.quizType;
+    if (type === quizState.type && mode === "quiz") return;
+    startQuiz(type);
+  });
+
+  quizTypeFormEl.addEventListener("submit", (e) => {
+    e.preventDefault();
+    answerQuizTyped();
+  });
 
   btnReset.addEventListener("click", () => {
     rootSelect.value = "";
@@ -555,7 +667,7 @@
   });
 
   btnQuizNext.addEventListener("click", quizNext);
-  btnQuizRestart.addEventListener("click", startQuiz);
+  btnQuizRestart.addEventListener("click", () => startQuiz());
 
   // ---- 초기 렌더 ----
   render();
