@@ -94,13 +94,24 @@
     </section>
 
     <section id="quiz-view" class="quiz-view" hidden>
+      <div class="quiz-type-tabs" id="quiz-type-tabs">
+        <button type="button" class="quiz-type-tab" data-quiz-type="meaning-choice">뜻 맞추기</button>
+        <button type="button" class="quiz-type-tab" data-quiz-type="type-word">단어 쓰기</button>
+        <button type="button" class="quiz-type-tab" data-quiz-type="type-meaning">뜻 쓰기</button>
+        <button type="button" class="quiz-type-tab" data-quiz-type="fill-blank">빈칸 채우기</button>
+      </div>
       <div class="quiz-score">
         <span id="quiz-progress"></span>
         <span id="quiz-score"></span>
       </div>
       <div class="quiz-card">
+        <div class="quiz-prompt-label" id="quiz-prompt-label"></div>
         <div class="quiz-word" id="quiz-word"></div>
         <div class="quiz-options" id="quiz-options"></div>
+        <form id="quiz-type-form" class="quiz-type-form" hidden>
+          <input type="text" id="quiz-type-input" class="quiz-type-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="답을 입력하세요" />
+          <button type="submit" class="btn btn-primary">확인</button>
+        </form>
         <div id="quiz-feedback" class="quiz-feedback"></div>
       </div>
       <div class="quiz-nav">
