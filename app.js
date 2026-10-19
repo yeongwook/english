@@ -8,6 +8,7 @@
       FLAT_WORDS.push({
         word: w.word,
         meaning: w.meaning,
+        pos: w.pos,
         difficulty: w.difficulty,
         parts: w.parts,
         example: w.example,
@@ -40,7 +41,9 @@
   const flashcardView = document.getElementById("flashcard-view");
   const flashcardEl = document.getElementById("flashcard");
   const flashcardWordEl = document.getElementById("flashcard-word");
+  const flashcardPosEl = document.getElementById("flashcard-pos");
   const flashcardRootTagEl = document.getElementById("flashcard-root-tag");
+  const flashcardExampleEl = document.getElementById("flashcard-example");
   const flashcardBreakdownEl = document.getElementById("flashcard-breakdown");
   const flashcardPositionEl = document.getElementById("flashcard-position");
   const btnFlashcardFlip = document.getElementById("btn-flashcard-flip");
@@ -211,10 +214,20 @@
     const top = document.createElement("div");
     top.className = "word-top";
 
-    const title = document.createElement("span");
+    const title = document.createElement("button");
+    title.type = "button";
     title.className = "word-title";
     title.textContent = word.word;
+    title.setAttribute("aria-expanded", "false");
+    title.setAttribute("aria-label", word.word + " 예문 보기/숨기기");
     top.appendChild(title);
+
+    if (word.pos) {
+      const posTag = document.createElement("span");
+      posTag.className = "pos-tag";
+      posTag.textContent = word.pos;
+      top.appendChild(posTag);
+    }
 
     const speakBtn = document.createElement("button");
     speakBtn.type = "button";
@@ -249,6 +262,32 @@
 
     card.appendChild(top);
     card.appendChild(buildBreakdown(word));
+
+    if (word.example) {
+      const exampleEl = document.createElement("div");
+      exampleEl.className = "word-example";
+      exampleEl.hidden = true;
+
+      const exampleLabel = document.createElement("span");
+      exampleLabel.className = "word-example-label";
+      exampleLabel.textContent = "예문";
+      exampleEl.appendChild(exampleLabel);
+
+      const exampleText = document.createElement("span");
+      exampleText.className = "word-example-text";
+      exampleText.textContent = word.example;
+      exampleEl.appendChild(exampleText);
+
+      card.appendChild(exampleEl);
+
+      title.addEventListener("click", () => {
+        const show = exampleEl.hidden;
+        exampleEl.hidden = !show;
+        title.setAttribute("aria-expanded", String(show));
+        card.classList.toggle("example-open", show);
+      });
+    }
+
     return card;
   }
 
@@ -378,8 +417,10 @@
 
     if (deck.length === 0) {
       flashcardWordEl.textContent = "표시할 단어가 없어요";
+      flashcardPosEl.textContent = "";
       flashcardRootTagEl.textContent = "";
       flashcardBreakdownEl.innerHTML = "";
+      flashcardExampleEl.textContent = "";
       flashcardPositionEl.textContent = "0 / 0";
       btnFlashcardPrev.disabled = true;
       btnFlashcardNext.disabled = true;
@@ -393,9 +434,11 @@
 
     const word = deck[flashcardState.index];
     flashcardWordEl.textContent = word.word;
+    flashcardPosEl.textContent = word.pos || "";
     flashcardRootTagEl.textContent = word.root + " · " + word.rootMeaning;
     flashcardBreakdownEl.innerHTML = "";
     flashcardBreakdownEl.appendChild(buildBreakdown(word));
+    flashcardExampleEl.textContent = word.example ? "예문  " + word.example : "";
     flashcardPositionEl.textContent = (flashcardState.index + 1) + " / " + deck.length;
   }
 
