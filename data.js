@@ -517,4 +517,244 @@ const ROOT_GROUPS = [
       { word: "recipient", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "cip", type: "root", m: "받다" }, { t: "ient", type: "suffix", m: "~하는 사람" }], meaning: "수령인", difficulty: "medium", example: "The award recipient will give a short speech at the ceremony." },
     ],
   },
+  {
+    root: "aud / audit",
+    rootMeaning: "듣다 (hear)",
+    words: [
+      { word: "audible", parts: [{ t: "aud", type: "root", m: "듣다" }, { t: "ible", type: "suffix", m: "~할 수 있는" }], meaning: "들리는", difficulty: "easy", example: "The announcement was barely audible over the noise of the factory floor." },
+      { word: "audience", parts: [{ t: "aud", type: "root", m: "듣다" }, { t: "ience", type: "suffix", m: "~것" }], meaning: "청중, 관객", difficulty: "easy", example: "The product launch attracted a large audience of industry professionals." },
+      { word: "audit", parts: [{ t: "aud", type: "root", m: "듣다" }, { t: "it", type: "suffix", m: "~것" }], meaning: "감사(監査), 회계감사하다", difficulty: "medium", example: "The finance team will audit all expense reports submitted last quarter." },
+      { word: "auditorium", parts: [{ t: "audit", type: "root", m: "듣다" }, { t: "orium", type: "suffix", m: "~장소" }], meaning: "강당", difficulty: "easy", example: "The conference will be held in the auditorium on the third floor." },
+    ],
+  },
+  {
+    root: "cert",
+    rootMeaning: "확실한 (sure, certain)",
+    words: [
+      { word: "certain", parts: [{ t: "cert", type: "root", m: "확실한" }, { t: "ain", type: "suffix", m: "~한" }], meaning: "확실한", difficulty: "easy", example: "We are not certain whether the shipment will arrive before Friday." },
+      { word: "certify", parts: [{ t: "cert", type: "root", m: "확실한" }, { t: "ify", type: "suffix", m: "~하게 만들다" }], meaning: "증명하다, 보증하다", difficulty: "medium", example: "An independent inspector will certify that the building meets safety standards." },
+      { word: "certificate", parts: [{ t: "cert", type: "root", m: "확실한" }, { t: "ificate", type: "suffix", m: "~것" }], meaning: "증명서, 자격증", difficulty: "easy", example: "Employees who complete the course receive a certificate of completion." },
+      { word: "uncertainty", parts: [{ t: "un", type: "prefix", m: "부정" }, { t: "cert", type: "root", m: "확실한" }, { t: "ainty", type: "suffix", m: "~것" }], meaning: "불확실성", difficulty: "medium", example: "The uncertainty surrounding the merger has made investors nervous." },
+    ],
+  },
+  {
+    root: "claim / clam",
+    rootMeaning: "외치다 (shout, cry out)",
+    words: [
+      { word: "claim", parts: [{ t: "claim", type: "root", m: "외치다, 주장하다" }], meaning: "주장하다, 요구하다", difficulty: "easy", example: "Customers can claim a refund within thirty days of purchase." },
+      { word: "exclaim", parts: [{ t: "ex", type: "prefix", m: "밖으로" }, { t: "claim", type: "root", m: "외치다" }], meaning: "소리치다, 외치다", difficulty: "medium", example: "She couldn't help but exclaim with excitement when she saw the new office." },
+      { word: "proclaim", parts: [{ t: "pro", type: "prefix", m: "앞에" }, { t: "claim", type: "root", m: "외치다" }], meaning: "선언하다, 공표하다", difficulty: "hard", example: "The CEO plans to proclaim the merger officially at tomorrow's press conference." },
+      { word: "reclaim", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "claim", type: "root", m: "외치다" }], meaning: "되찾다, 매립하다", difficulty: "medium", example: "The company hopes to reclaim its market share with the new product line." },
+    ],
+  },
+  {
+    root: "clude / clos",
+    rootMeaning: "닫다 (close, shut)",
+    words: [
+      { word: "include", parts: [{ t: "in", type: "prefix", m: "안에" }, { t: "clude", type: "root", m: "닫다" }], meaning: "포함하다", difficulty: "easy", example: "The quoted price does not include shipping and handling fees." },
+      { word: "exclude", parts: [{ t: "ex", type: "prefix", m: "밖으로" }, { t: "clude", type: "root", m: "닫다" }], meaning: "제외하다", difficulty: "medium", example: "The warranty does not exclude damage caused by normal wear and tear." },
+      { word: "conclude", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "clude", type: "root", m: "닫다" }], meaning: "결론을 내리다", difficulty: "medium", example: "The meeting is expected to conclude before noon." },
+      { word: "enclose", parts: [{ t: "en", type: "prefix", m: "안에" }, { t: "close", type: "root", m: "닫다" }], meaning: "동봉하다", difficulty: "medium", example: "Please enclose a copy of your receipt with the return form." },
+      { word: "disclose", parts: [{ t: "dis", type: "prefix", m: "반대로" }, { t: "close", type: "root", m: "닫다" }], meaning: "공개하다, 밝히다", difficulty: "medium", example: "The company must disclose any financial risks to its shareholders." },
+    ],
+  },
+  {
+    root: "corp",
+    rootMeaning: "몸 (body)",
+    words: [
+      { word: "corporate", parts: [{ t: "corp", type: "root", m: "몸" }, { t: "orate", type: "suffix", m: "~의" }], meaning: "기업의, 법인의", difficulty: "easy", example: "The new policy applies to all corporate offices nationwide." },
+      { word: "corporation", parts: [{ t: "corp", type: "root", m: "몸" }, { t: "oration", type: "suffix", m: "~것" }], meaning: "기업, 법인", difficulty: "easy", example: "The corporation reported record profits for the third straight year." },
+      { word: "incorporate", parts: [{ t: "in", type: "prefix", m: "안으로" }, { t: "corp", type: "root", m: "몸" }, { t: "orate", type: "suffix", m: "~하게 하다" }], meaning: "포함하다, 법인화하다", difficulty: "hard", example: "The team decided to incorporate customer feedback into the final design." },
+    ],
+  },
+  {
+    root: "curr / curs",
+    rootMeaning: "달리다 (run)",
+    words: [
+      { word: "current", parts: [{ t: "curr", type: "root", m: "달리다" }, { t: "ent", type: "suffix", m: "~한" }], meaning: "현재의, 흐름", difficulty: "easy", example: "The current version of the software will be replaced next month." },
+      { word: "occur", parts: [{ t: "oc", type: "prefix", m: "~쪽으로" }, { t: "cur", type: "root", m: "달리다" }], meaning: "발생하다", difficulty: "easy", example: "Delays sometimes occur during the busiest shipping season." },
+      { word: "incur", parts: [{ t: "in", type: "prefix", m: "안으로" }, { t: "cur", type: "root", m: "달리다" }], meaning: "(비용을) 초래하다, 발생시키다", difficulty: "medium", example: "Late payments will incur an additional fee of five percent." },
+      { word: "recur", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "cur", type: "root", m: "달리다" }], meaning: "재발하다, 반복되다", difficulty: "medium", example: "If the problem continues to recur, please contact technical support." },
+    ],
+  },
+  {
+    root: "dur",
+    rootMeaning: "지속되다 (last, endure)",
+    words: [
+      { word: "during", parts: [{ t: "dur", type: "root", m: "지속되다" }, { t: "ing", type: "suffix", m: "~하는 동안" }], meaning: "~동안", difficulty: "easy", example: "Please silence your phones during the presentation." },
+      { word: "durable", parts: [{ t: "dur", type: "root", m: "지속되다" }, { t: "able", type: "suffix", m: "~할 수 있는" }], meaning: "내구성 있는", difficulty: "medium", example: "The company is known for producing durable, long-lasting furniture." },
+      { word: "endure", parts: [{ t: "en", type: "prefix", m: "안에" }, { t: "dure", type: "root", m: "지속되다" }], meaning: "견디다, 참다", difficulty: "medium", example: "Small businesses had to endure months of reduced sales during the renovation." },
+      { word: "duration", parts: [{ t: "dur", type: "root", m: "지속되다" }, { t: "ation", type: "suffix", m: "~것" }], meaning: "지속 기간", difficulty: "medium", example: "The warranty covers the entire duration of the lease agreement." },
+    ],
+  },
+  {
+    root: "firm",
+    rootMeaning: "확고한 (firm, fixed)",
+    words: [
+      { word: "confirm", parts: [{ t: "con", type: "prefix", m: "완전히" }, { t: "firm", type: "root", m: "확고한" }], meaning: "확인하다", difficulty: "easy", example: "Please confirm your attendance by replying to this email." },
+      { word: "affirm", parts: [{ t: "af", type: "prefix", m: "~쪽으로" }, { t: "firm", type: "root", m: "확고한" }], meaning: "확언하다, 단언하다", difficulty: "medium", example: "The spokesperson was quick to affirm the company's commitment to quality." },
+      { word: "firmly", parts: [{ t: "firm", type: "root", m: "확고한" }, { t: "ly", type: "suffix", m: "~하게" }], meaning: "확고하게, 단호히", difficulty: "easy", example: "Management firmly believes the new strategy will increase revenue." },
+      { word: "reaffirm", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "af", type: "prefix", m: "~쪽으로" }, { t: "firm", type: "root", m: "확고한" }], meaning: "재확인하다", difficulty: "hard", example: "The board chose to reaffirm its support for the current CEO." },
+    ],
+  },
+  {
+    root: "habit / hibit",
+    rootMeaning: "가지다, 살다 (have, dwell)",
+    words: [
+      { word: "exhibit", parts: [{ t: "ex", type: "prefix", m: "밖으로" }, { t: "hibit", type: "root", m: "가지다" }], meaning: "전시하다, 전시회", difficulty: "easy", example: "The gallery will exhibit works from local artists next month." },
+      { word: "inhibit", parts: [{ t: "in", type: "prefix", m: "안에" }, { t: "hibit", type: "root", m: "가지다" }], meaning: "억제하다", difficulty: "hard", example: "Strict regulations can sometimes inhibit a company's growth." },
+      { word: "prohibit", parts: [{ t: "pro", type: "prefix", m: "앞에" }, { t: "hibit", type: "root", m: "가지다" }], meaning: "금지하다", difficulty: "medium", example: "Company policy will prohibit the use of personal devices during meetings." },
+      { word: "habitat", parts: [{ t: "habit", type: "root", m: "살다" }, { t: "at", type: "suffix", m: "~것" }], meaning: "서식지", difficulty: "easy", example: "The new regulations aim to protect the habitat near the construction site." },
+    ],
+  },
+  {
+    root: "leg / lig / lect",
+    rootMeaning: "모으다, 뽑다, 법 (choose, gather, law)",
+    words: [
+      { word: "collect", parts: [{ t: "col", type: "prefix", m: "함께" }, { t: "lect", type: "root", m: "모으다" }], meaning: "수집하다, 징수하다", difficulty: "easy", example: "The accounting department will collect receipts at the end of each month." },
+      { word: "select", parts: [{ t: "se", type: "prefix", m: "따로" }, { t: "lect", type: "root", m: "뽑다" }], meaning: "선택하다", difficulty: "easy", example: "Please select a delivery date from the options below." },
+      { word: "elect", parts: [{ t: "e", type: "prefix", m: "밖으로" }, { t: "lect", type: "root", m: "뽑다" }], meaning: "선출하다", difficulty: "easy", example: "Shareholders will elect a new board member at the annual meeting." },
+      { word: "legal", parts: [{ t: "leg", type: "root", m: "법" }, { t: "al", type: "suffix", m: "~의" }], meaning: "법적인, 합법적인", difficulty: "easy", example: "You should consult the legal department before signing the contract." },
+      { word: "delegate", parts: [{ t: "de", type: "prefix", m: "아래로" }, { t: "leg", type: "root", m: "뽑다" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "위임하다, 대표", difficulty: "hard", example: "The manager decided to delegate the project to a junior team member." },
+      { word: "eligible", parts: [{ t: "e", type: "prefix", m: "밖으로" }, { t: "lig", type: "root", m: "뽑다" }, { t: "ible", type: "suffix", m: "~할 수 있는" }], meaning: "자격이 있는", difficulty: "medium", example: "Only full-time employees are eligible for the health insurance plan." },
+    ],
+  },
+  {
+    root: "manu / main / man",
+    rootMeaning: "손 (hand)",
+    words: [
+      { word: "manual", parts: [{ t: "manu", type: "root", m: "손" }, { t: "al", type: "suffix", m: "~의" }], meaning: "수동의, 설명서", difficulty: "easy", example: "The technician referred to the manual before repairing the machine." },
+      { word: "maintain", parts: [{ t: "main", type: "prefix", m: "손으로" }, { t: "tain", type: "root", m: "잡다" }], meaning: "유지하다", difficulty: "easy", example: "It is important to maintain accurate records of all transactions." },
+      { word: "maintenance", parts: [{ t: "main", type: "prefix", m: "손으로" }, { t: "ten", type: "root", m: "잡다" }, { t: "ance", type: "suffix", m: "~것" }], meaning: "유지보수", difficulty: "medium", example: "The building will be closed for scheduled maintenance this weekend." },
+      { word: "manipulate", parts: [{ t: "man", type: "root", m: "손" }, { t: "ipulate", type: "suffix", m: "~하게 다루다" }], meaning: "조작하다, 다루다", difficulty: "hard", example: "Analysts warned that the report may manipulate investors' expectations." },
+    ],
+  },
+  {
+    root: "merc",
+    rootMeaning: "상업 (trade, commerce)",
+    words: [
+      { word: "commerce", parts: [{ t: "com", type: "prefix", m: "함께" }, { t: "merce", type: "root", m: "상업" }], meaning: "상업, 무역", difficulty: "easy", example: "The agreement is expected to boost commerce between the two countries." },
+      { word: "merchant", parts: [{ t: "merch", type: "root", m: "상업" }, { t: "ant", type: "suffix", m: "~하는 사람" }], meaning: "상인", difficulty: "easy", example: "The online merchant offers free returns on all orders." },
+      { word: "merchandise", parts: [{ t: "merchand", type: "root", m: "상업" }, { t: "ise", type: "suffix", m: "~것" }], meaning: "상품", difficulty: "medium", example: "The store's merchandise includes clothing, electronics, and home goods." },
+      { word: "commercial", parts: [{ t: "com", type: "prefix", m: "함께" }, { t: "merc", type: "root", m: "상업" }, { t: "ial", type: "suffix", m: "~의" }], meaning: "상업의, 광고", difficulty: "easy", example: "The company plans to launch a new commercial during the sports broadcast." },
+    ],
+  },
+  {
+    root: "min",
+    rootMeaning: "작은 (small)",
+    words: [
+      { word: "minor", parts: [{ t: "min", type: "root", m: "작은" }, { t: "or", type: "suffix", m: "~한" }], meaning: "작은, 미성년자", difficulty: "easy", example: "There were only a few minor issues with the final report." },
+      { word: "minimum", parts: [{ t: "min", type: "root", m: "작은" }, { t: "imum", type: "suffix", m: "최상급" }], meaning: "최소의, 최소한도", difficulty: "easy", example: "Applicants must have a minimum of three years of experience." },
+      { word: "minimal", parts: [{ t: "min", type: "root", m: "작은" }, { t: "imal", type: "suffix", m: "~의" }], meaning: "최소의", difficulty: "easy", example: "The new system required only minimal training for staff." },
+    ],
+  },
+  {
+    root: "nov",
+    rootMeaning: "새로운 (new)",
+    words: [
+      { word: "novel", parts: [{ t: "nov", type: "root", m: "새로운" }, { t: "el", type: "suffix", m: "~한" }], meaning: "새로운, 소설", difficulty: "easy", example: "The marketing team proposed a novel approach to the advertising campaign." },
+      { word: "innovate", parts: [{ t: "in", type: "prefix", m: "안으로" }, { t: "nov", type: "root", m: "새로운" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "혁신하다", difficulty: "medium", example: "The company encourages employees to innovate and share new ideas." },
+      { word: "renovate", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "nov", type: "root", m: "새로운" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "보수하다, 개조하다", difficulty: "medium", example: "The office plans to renovate the lobby next spring." },
+      { word: "novelty", parts: [{ t: "nov", type: "root", m: "새로운" }, { t: "elty", type: "suffix", m: "~것" }], meaning: "참신함, 새로움", difficulty: "medium", example: "The novelty of the product wore off after a few months on the market." },
+    ],
+  },
+  {
+    root: "oper",
+    rootMeaning: "일하다 (work)",
+    words: [
+      { word: "operate", parts: [{ t: "oper", type: "root", m: "일하다" }, { t: "ate", type: "suffix", m: "~하다" }], meaning: "작동하다, 운영하다", difficulty: "easy", example: "The factory will operate twenty-four hours a day during peak season." },
+      { word: "cooperate", parts: [{ t: "co", type: "prefix", m: "함께" }, { t: "oper", type: "root", m: "일하다" }, { t: "ate", type: "suffix", m: "~하다" }], meaning: "협력하다", difficulty: "medium", example: "Both departments agreed to cooperate on the new project." },
+      { word: "operation", parts: [{ t: "oper", type: "root", m: "일하다" }, { t: "ation", type: "suffix", m: "~것" }], meaning: "운영, 작동", difficulty: "easy", example: "The company expanded its operation into three new countries this year." },
+      { word: "operator", parts: [{ t: "oper", type: "root", m: "일하다" }, { t: "ator", type: "suffix", m: "~하는 사람" }], meaning: "운영자, 기사", difficulty: "easy", example: "The phone operator transferred the call to the correct department." },
+    ],
+  },
+  {
+    root: "plic / ply / plex",
+    rootMeaning: "접다, 채우다 (fold, fill)",
+    words: [
+      { word: "apply", parts: [{ t: "ap", type: "prefix", m: "~쪽으로" }, { t: "ply", type: "root", m: "접다" }], meaning: "신청하다, 적용하다", difficulty: "easy", example: "Candidates are encouraged to apply online before the deadline." },
+      { word: "imply", parts: [{ t: "im", type: "prefix", m: "안으로" }, { t: "ply", type: "root", m: "접다" }], meaning: "암시하다", difficulty: "medium", example: "The memo seemed to imply that layoffs were being considered." },
+      { word: "comply", parts: [{ t: "com", type: "prefix", m: "함께" }, { t: "ply", type: "root", m: "접다" }], meaning: "따르다, 준수하다", difficulty: "medium", example: "All vendors must comply with the new safety regulations." },
+      { word: "supply", parts: [{ t: "su", type: "prefix", m: "아래에" }, { t: "pply", type: "root", m: "채우다" }], meaning: "공급하다", difficulty: "easy", example: "The factory struggled to supply enough units to meet demand." },
+      { word: "complex", parts: [{ t: "com", type: "prefix", m: "함께" }, { t: "plex", type: "root", m: "접다" }], meaning: "복잡한, 복합건물", difficulty: "easy", example: "The new tax regulations are far more complex than the previous ones." },
+    ],
+  },
+  {
+    root: "prob / prov",
+    rootMeaning: "증명하다 (prove, test)",
+    words: [
+      { word: "prove", parts: [{ t: "prove", type: "root", m: "증명하다" }], meaning: "증명하다", difficulty: "easy", example: "The sales figures prove that the new strategy is working." },
+      { word: "probable", parts: [{ t: "prob", type: "root", m: "증명하다" }, { t: "able", type: "suffix", m: "~할 수 있는" }], meaning: "있음직한, 개연성 있는", difficulty: "medium", example: "It is probable that the shipment will be delayed due to the storm." },
+      { word: "approve", parts: [{ t: "ap", type: "prefix", m: "~쪽으로" }, { t: "prove", type: "root", m: "증명하다" }], meaning: "승인하다", difficulty: "easy", example: "The finance team must approve all expenses over one thousand dollars." },
+      { word: "probe", parts: [{ t: "probe", type: "root", m: "증명하다, 조사하다" }], meaning: "조사하다, 탐사선", difficulty: "medium", example: "Investigators launched a probe into the company's accounting practices." },
+    ],
+  },
+  {
+    root: "quir / quer / quest",
+    rootMeaning: "구하다, 묻다 (seek, ask)",
+    words: [
+      { word: "require", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "quire", type: "root", m: "구하다" }], meaning: "요구하다, 필요로 하다", difficulty: "easy", example: "The position may require up to two years of relevant experience." },
+      { word: "inquire", parts: [{ t: "in", type: "prefix", m: "안으로" }, { t: "quire", type: "root", m: "묻다" }], meaning: "문의하다", difficulty: "medium", example: "Please inquire at the front desk if you need further assistance." },
+      { word: "acquire", parts: [{ t: "ac", type: "prefix", m: "~쪽으로" }, { t: "quire", type: "root", m: "구하다" }], meaning: "습득하다, 인수하다", difficulty: "medium", example: "The company plans to acquire a smaller competitor next year." },
+      { word: "request", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "quest", type: "root", m: "구하다" }], meaning: "요청하다", difficulty: "easy", example: "Employees must request approval before booking international travel." },
+    ],
+  },
+  {
+    root: "serv",
+    rootMeaning: "지키다, 섬기다 (keep, serve)",
+    words: [
+      { word: "preserve", parts: [{ t: "pre", type: "prefix", m: "미리" }, { t: "serve", type: "root", m: "지키다" }], meaning: "보존하다", difficulty: "medium", example: "The company took steps to preserve its reputation after the incident." },
+      { word: "reserve", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "serve", type: "root", m: "지키다" }], meaning: "예약하다, 비축하다", difficulty: "easy", example: "We recommend that you reserve a table in advance for large groups." },
+      { word: "conserve", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "serve", type: "root", m: "지키다" }], meaning: "보존하다, 절약하다", difficulty: "medium", example: "The office installed new lighting to conserve energy." },
+      { word: "serve", parts: [{ t: "serve", type: "root", m: "섬기다" }], meaning: "제공하다, 근무하다", difficulty: "easy", example: "This department will serve both domestic and export customers starting next year." },
+    ],
+  },
+  {
+    root: "solv / solu",
+    rootMeaning: "풀다 (loosen, solve)",
+    words: [
+      { word: "resolve", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "solve", type: "root", m: "풀다" }], meaning: "해결하다, 결심하다", difficulty: "medium", example: "The support team worked quickly to resolve the customer's complaint." },
+      { word: "dissolve", parts: [{ t: "dis", type: "prefix", m: "흩어지게" }, { t: "solve", type: "root", m: "풀다" }], meaning: "용해시키다, 해산하다", difficulty: "medium", example: "The partnership will dissolve at the end of the fiscal year." },
+      { word: "solution", parts: [{ t: "solu", type: "root", m: "풀다" }, { t: "tion", type: "suffix", m: "~것" }], meaning: "해결책, 용액", difficulty: "easy", example: "The consultant proposed a simple solution to reduce shipping costs." },
+    ],
+  },
+  {
+    root: "tain / ten",
+    rootMeaning: "잡다, 유지하다 (hold)",
+    words: [
+      { word: "obtain", parts: [{ t: "ob", type: "prefix", m: "~쪽으로" }, { t: "tain", type: "root", m: "잡다" }], meaning: "얻다, 획득하다", difficulty: "easy", example: "New employees must obtain a security badge before their first day." },
+      { word: "retain", parts: [{ t: "re", type: "prefix", m: "뒤에" }, { t: "tain", type: "root", m: "잡다" }], meaning: "유지하다, 보유하다", difficulty: "medium", example: "The company offered bonuses to retain its top performers." },
+      { word: "contain", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "tain", type: "root", m: "잡다" }], meaning: "포함하다, 억제하다", difficulty: "easy", example: "The package did not contain all of the items listed on the invoice." },
+      { word: "sustain", parts: [{ t: "sus", type: "prefix", m: "아래에서" }, { t: "tain", type: "root", m: "잡다" }], meaning: "지속시키다, 부양하다", difficulty: "medium", example: "The firm struggled to sustain its growth during the economic downturn." },
+    ],
+  },
+  {
+    root: "termin",
+    rootMeaning: "끝 (end, limit)",
+    words: [
+      { word: "terminal", parts: [{ t: "termin", type: "root", m: "끝" }, { t: "al", type: "suffix", m: "~의" }], meaning: "종착역, 끝의", difficulty: "easy", example: "Passengers should arrive at the terminal two hours before departure." },
+      { word: "terminate", parts: [{ t: "termin", type: "root", m: "끝" }, { t: "ate", type: "suffix", m: "~하다" }], meaning: "종료하다, 해지하다", difficulty: "medium", example: "The company reserves the right to terminate the contract with notice." },
+      { word: "exterminate", parts: [{ t: "ex", type: "prefix", m: "완전히" }, { t: "termin", type: "root", m: "끝" }, { t: "ate", type: "suffix", m: "~하다" }], meaning: "몰살시키다, 박멸하다", difficulty: "hard", example: "The building hired a company to exterminate pests found in the basement." },
+      { word: "determine", parts: [{ t: "de", type: "prefix", m: "완전히" }, { t: "termine", type: "root", m: "끝" }], meaning: "결정하다, 알아내다", difficulty: "easy", example: "An inspection will determine whether the equipment needs to be replaced." },
+    ],
+  },
+  {
+    root: "trib",
+    rootMeaning: "주다, 할당하다 (give, allot)",
+    words: [
+      { word: "contribute", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "tribute", type: "root", m: "주다" }], meaning: "기여하다, 기부하다", difficulty: "easy", example: "Every department is expected to contribute ideas for the annual report." },
+      { word: "distribute", parts: [{ t: "dis", type: "prefix", m: "널리" }, { t: "tribute", type: "root", m: "주다" }], meaning: "분배하다, 유통하다", difficulty: "easy", example: "The company will distribute the new catalog to all retail partners." },
+      { word: "attribute", parts: [{ t: "at", type: "prefix", m: "~쪽으로" }, { t: "tribute", type: "root", m: "주다" }], meaning: "~의 탓으로 보다, 속성", difficulty: "medium", example: "Analysts attribute the rise in sales to the recent advertising campaign." },
+    ],
+  },
+  {
+    root: "val",
+    rootMeaning: "가치있는 (worth, strong)",
+    words: [
+      { word: "value", parts: [{ t: "val", type: "root", m: "가치있는" }, { t: "ue", type: "suffix", m: "~것" }], meaning: "가치, 평가하다", difficulty: "easy", example: "The appraiser will value the property before the sale is finalized." },
+      { word: "evaluate", parts: [{ t: "e", type: "prefix", m: "밖으로" }, { t: "val", type: "root", m: "가치있는" }, { t: "uate", type: "suffix", m: "~하다" }], meaning: "평가하다", difficulty: "medium", example: "Managers evaluate employee performance twice a year." },
+      { word: "valid", parts: [{ t: "val", type: "root", m: "가치있는" }, { t: "id", type: "suffix", m: "~한" }], meaning: "유효한, 타당한", difficulty: "easy", example: "Your parking pass is valid for the entire month." },
+      { word: "invaluable", parts: [{ t: "in", type: "prefix", m: "부정" }, { t: "val", type: "root", m: "가치있는" }, { t: "uable", type: "suffix", m: "~할 수 있는" }], meaning: "매우 귀중한", difficulty: "hard", example: "Her experience in logistics proved invaluable during the product launch." },
+    ],
+  },
 ];
