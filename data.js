@@ -367,6 +367,9 @@ const ROOT_GROUPS = [
       { word: "intervene", parts: [{ t: "inter", type: "prefix", m: "사이에" }, { t: "vene", type: "root", m: "오다" }], meaning: "개입하다", difficulty: "medium", example: "Teachers sometimes need to intervene in playground disputes." },
       { word: "convention", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "vent", type: "root", m: "오다" }, { t: "ion", type: "suffix", m: "~것" }], meaning: "회의, 관습", difficulty: "medium", example: "Thousands of fans attended the comic book convention." },
       { word: "venue", parts: [{ t: "ven", type: "root", m: "오다" }, { t: "ue", type: "suffix", m: "~것" }], meaning: "장소, 개최지", difficulty: "easy", example: "They booked a new venue for the wedding reception." },
+      { word: "invent", parts: [{ t: "in", type: "prefix", m: "안에" }, { t: "vent", type: "root", m: "오다" }], meaning: "발명하다", difficulty: "easy", example: "Engineers at the company worked for years to invent a cheaper battery." },
+      { word: "inventory", parts: [{ t: "in", type: "prefix", m: "안에" }, { t: "vent", type: "root", m: "오다" }, { t: "ory", type: "suffix", m: "~것" }], meaning: "재고, 물품 목록", difficulty: "medium", example: "The warehouse staff count the inventory at the end of every month." },
+      { word: "revenue", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "ven", type: "root", m: "오다" }, { t: "ue", type: "suffix", m: "~것" }], meaning: "수익, 세입", difficulty: "medium", example: "The company's revenue grew by fifteen percent last year." },
     ],
   },
   {
@@ -420,6 +423,9 @@ const ROOT_GROUPS = [
       { word: "instant", parts: [{ t: "in", type: "prefix", m: "안에" }, { t: "stant", type: "root", m: "서다" }], meaning: "순간, 즉각적인", difficulty: "easy", example: "It felt like an instant before the lights went out." },
       { word: "circumstance", parts: [{ t: "circum", type: "prefix", m: "주위에" }, { t: "stance", type: "root", m: "서다" }], meaning: "상황, 환경", difficulty: "medium", example: "Under no circumstance should you leave the door unlocked." },
       { word: "obstacle", parts: [{ t: "ob", type: "prefix", m: "막아서서" }, { t: "sta", type: "root", m: "서다" }, { t: "cle", type: "suffix", m: "~것" }], meaning: "장애물", difficulty: "medium", example: "Lack of funding was the biggest obstacle to the project." },
+      { word: "institute", parts: [{ t: "in", type: "prefix", m: "안에" }, { t: "stit", type: "root", m: "서다" }, { t: "ute", type: "suffix", m: "~것" }], meaning: "설립하다, 기관", difficulty: "medium", example: "The university plans to institute a new policy on remote exams." },
+      { word: "substitute", parts: [{ t: "sub", type: "prefix", m: "아래에" }, { t: "stit", type: "root", m: "서다" }, { t: "ute", type: "suffix", m: "~것" }], meaning: "대체하다, 대리자", difficulty: "medium", example: "You may substitute the printed form with an online application instead." },
+      { word: "constitute", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "stit", type: "root", m: "서다" }, { t: "ute", type: "suffix", m: "~것" }], meaning: "구성하다", difficulty: "hard", example: "These three departments constitute the entire marketing division." },
     ],
   },
   {
@@ -450,6 +456,65 @@ const ROOT_GROUPS = [
       { word: "hamper", parts: [{ t: "hamper", type: "root", m: "방해하다 (옛 프랑스어 hanapier에서 유래, 어원 불명확)" }], meaning: "방해하다, 저지하다", difficulty: "medium", example: "A lack of funding continues to hamper the research project." },
       { word: "thoroughly", parts: [{ t: "thorough", type: "root", m: "완전히 (고대영어 þuruh, through의 변형)" }, { t: "ly", type: "suffix", m: "~하게" }], meaning: "완전히, 철저하게", difficulty: "easy", example: "Please read the instructions thoroughly before starting." },
       { word: "akin", parts: [{ t: "a", type: "prefix", m: "~인 상태의" }, { t: "kin", type: "root", m: "친족 (게르만어 kin, 가족)" }], meaning: "동족의, 유사한", difficulty: "hard", example: "Her approach to teaching is akin to coaching a sports team." },
+    ],
+  },
+  {
+    root: "loc",
+    rootMeaning: "장소 (place)",
+    words: [
+      { word: "allocate", parts: [{ t: "al", type: "prefix", m: "~쪽으로" }, { t: "loc", type: "root", m: "장소" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "할당하다, 배분하다", difficulty: "medium", example: "The manager will allocate more staff to the customer service team next quarter." },
+      { word: "locate", parts: [{ t: "loc", type: "root", m: "장소" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "위치시키다, 찾아내다", difficulty: "easy", example: "New employees can use the directory to locate any department in the building." },
+      { word: "relocate", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "loc", type: "root", m: "장소" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "이전하다", difficulty: "medium", example: "The company plans to relocate its headquarters to a larger office downtown." },
+      { word: "dislocate", parts: [{ t: "dis", type: "prefix", m: "떨어져" }, { t: "loc", type: "root", m: "장소" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "이동시키다, 탈구시키다", difficulty: "hard", example: "He had to leave the game early after he managed to dislocate his shoulder." },
+    ],
+  },
+  {
+    root: "pend / pens",
+    rootMeaning: "매달다, 무게를 달다 (hang, weigh)",
+    words: [
+      { word: "suspend", parts: [{ t: "sus", type: "prefix", m: "아래에" }, { t: "pend", type: "root", m: "매달다" }], meaning: "중단하다, 정직시키다", difficulty: "medium", example: "The airline decided to suspend all flights until the storm had passed." },
+      { word: "compensate", parts: [{ t: "com", type: "prefix", m: "함께" }, { t: "pens", type: "root", m: "무게를 달다" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "보상하다", difficulty: "medium", example: "The airline offered to compensate passengers for the long delay." },
+      { word: "dispense", parts: [{ t: "dis", type: "prefix", m: "나누어" }, { t: "pense", type: "root", m: "무게를 달다" }], meaning: "분배하다, 지급하다", difficulty: "medium", example: "The machine in the lobby will dispense free coffee to all visitors." },
+      { word: "indispensable", parts: [{ t: "in", type: "prefix", m: "부정" }, { t: "dispens", type: "root", m: "나누어 주다" }, { t: "able", type: "suffix", m: "~할 수 있는" }], meaning: "필수적인", difficulty: "hard", example: "Reliable software support has become indispensable to modern offices." },
+    ],
+  },
+  {
+    root: "mand",
+    rootMeaning: "명령하다, 맡기다 (order, entrust)",
+    words: [
+      { word: "mandatory", parts: [{ t: "mand", type: "root", m: "명령하다" }, { t: "atory", type: "suffix", m: "~하는" }], meaning: "의무적인, 필수의", difficulty: "medium", example: "Attendance at the safety training session is mandatory for all new staff." },
+      { word: "command", parts: [{ t: "com", type: "prefix", m: "함께" }, { t: "mand", type: "root", m: "명령하다" }], meaning: "명령하다, 지휘하다", difficulty: "medium", example: "The new manager will command a team of more than twenty engineers." },
+      { word: "demand", parts: [{ t: "de", type: "prefix", m: "강조" }, { t: "mand", type: "root", m: "요구하다" }], meaning: "요구하다, 수요", difficulty: "easy", example: "Demand for the new smartphone far exceeded what the factory could supply." },
+      { word: "recommend", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "commend", type: "root", m: "맡기다" }], meaning: "추천하다", difficulty: "easy", example: "Our travel agent would recommend booking flights at least two months in advance." },
+    ],
+  },
+  {
+    root: "sequ / secut",
+    rootMeaning: "따르다 (follow)",
+    words: [
+      { word: "consequence", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "sequ", type: "root", m: "따르다" }, { t: "ence", type: "suffix", m: "~것" }], meaning: "결과", difficulty: "medium", example: "Missing the deadline could have a serious consequence for the whole team." },
+      { word: "subsequent", parts: [{ t: "sub", type: "prefix", m: "아래에" }, { t: "sequ", type: "root", m: "따르다" }, { t: "ent", type: "suffix", m: "~한" }], meaning: "그 다음의", difficulty: "medium", example: "The first meeting went well, so a subsequent session was scheduled for Friday." },
+      { word: "sequence", parts: [{ t: "sequ", type: "root", m: "따르다" }, { t: "ence", type: "suffix", m: "~것" }], meaning: "순서, 연속", difficulty: "medium", example: "Please complete the steps in the correct sequence to avoid delays." },
+      { word: "consecutive", parts: [{ t: "con", type: "prefix", m: "함께" }, { t: "secut", type: "root", m: "따르다" }, { t: "ive", type: "suffix", m: "~한" }], meaning: "연속적인", difficulty: "hard", example: "The company has reported a profit for five consecutive quarters." },
+    ],
+  },
+  {
+    root: "sign",
+    rootMeaning: "표시하다 (mark, sign)",
+    words: [
+      { word: "designate", parts: [{ t: "de", type: "prefix", m: "강조" }, { t: "sign", type: "root", m: "표시하다" }, { t: "ate", type: "suffix", m: "~하게 하다" }], meaning: "지정하다", difficulty: "medium", example: "The board will designate a new director to oversee the merger." },
+      { word: "significant", parts: [{ t: "sign", type: "root", m: "표시하다" }, { t: "ificant", type: "suffix", m: "~한" }], meaning: "중요한, 상당한", difficulty: "easy", example: "The new marketing strategy led to a significant increase in sales." },
+      { word: "signature", parts: [{ t: "sign", type: "root", m: "표시하다" }, { t: "ature", type: "suffix", m: "~것" }], meaning: "서명", difficulty: "easy", example: "Please provide your signature at the bottom of the contract." },
+    ],
+  },
+  {
+    root: "cept / ceive / cip",
+    rootMeaning: "받다, 잡다 (take, receive)",
+    words: [
+      { word: "receive", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "ceive", type: "root", m: "받다" }], meaning: "받다", difficulty: "easy", example: "Customers who order before Friday will receive free shipping." },
+      { word: "accept", parts: [{ t: "ac", type: "prefix", m: "~쪽으로" }, { t: "cept", type: "root", m: "받다" }], meaning: "수락하다", difficulty: "easy", example: "The hotel does not accept credit cards issued outside the country." },
+      { word: "exceptional", parts: [{ t: "ex", type: "prefix", m: "밖으로" }, { t: "cept", type: "root", m: "받다" }, { t: "ional", type: "suffix", m: "~한" }], meaning: "이례적인, 뛰어난", difficulty: "medium", example: "She received an award for her exceptional performance this year." },
+      { word: "recipient", parts: [{ t: "re", type: "prefix", m: "다시" }, { t: "cip", type: "root", m: "받다" }, { t: "ient", type: "suffix", m: "~하는 사람" }], meaning: "수령인", difficulty: "medium", example: "The award recipient will give a short speech at the ceremony." },
     ],
   },
 ];
